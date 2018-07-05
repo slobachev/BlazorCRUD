@@ -9,10 +9,17 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Browser" Version="0.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="0.4.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BlazorCrud.Shared\BlazorCrud.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Http.Extensions">
+      <HintPath>..\..\..\..\.nuget\packages\microsoft.aspnetcore.http.extensions\2.0.1\lib\netstandard2.0\Microsoft.AspNetCore.Http.Extensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
