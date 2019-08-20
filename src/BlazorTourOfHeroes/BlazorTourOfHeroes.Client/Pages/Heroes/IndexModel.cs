@@ -17,7 +17,7 @@ namespace BlazorTourOfHeroes.Client.Pages.Heroes
 
         protected List<Hero> Model { get; set; }
 
-        protected override async Task OnInitAsync()
+        protected override async Task OnInitializedAsync()
         {
             Model = await _client.GetHeroes();
         }
@@ -29,7 +29,7 @@ namespace BlazorTourOfHeroes.Client.Pages.Heroes
             {
                 await _client.CreateHero(Name);
                 Name = "";
-                await OnInitAsync();
+                await OnInitializedAsync();
                 StateHasChanged();
             }
         }
@@ -37,7 +37,7 @@ namespace BlazorTourOfHeroes.Client.Pages.Heroes
         protected async Task OnHeroDelete(int id)
         {
             await _client.DeleteHero(id.ToString());
-            await OnInitAsync();
+            await OnInitializedAsync();
             StateHasChanged();
         }
 
